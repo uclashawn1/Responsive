@@ -1,34 +1,39 @@
 body {
     background-image: url(../../assets/gravel/gravel.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
-}
-#containerf {
-    width: 50%;
-    border-style:solid;
-    margin: auto;
-    padding: 30px;
-    }
-
-#gposition{
-    margin: auto;
-    padding: 0px, 30px, 0px, 30px;
+    height: 100%;
 }
 
-#twrap{
-    display: inline;
-}
-
-#wrapper {
+div.wrapper {
     width: 80%;
     border-style: groove;
     margin: auto;
-    padding: 0px, 50px, 0px, 50px;
+    padding: 0px, 50px;
     background-color: rgba(132, 221, 217, 0.507);
-    
-    box-sizing: border-box;
+    background-repeat: repeat-y;
+    height: 100%;
 }
 
+
+div ~ a {
+  float: right;
+  
+}
+
+div > form {
+  padding: 50px, 50px;
+}
+
+div > #w3-third {
+  float: left;
+  height: 25%;
+}
+
+div > #w3-twothird {
+  float: right;
+  height: 25%;
+}
   
 h1 {
     color:whitesmoke;
@@ -38,17 +43,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
-.hr {
-    color: #777;    
-}
-h2 {
-    color: forestgreen;  
-    text-transform: uppercase; 
-    text-align: left;
-    width: auto; 
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
+   
 h3 {
     color: forestgreen;
     background-color: rgba(132, 221, 217, 0.507);
@@ -58,86 +53,19 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
-h2.hName {
-    color: whitesmoke;
-    background-color: forestgreen;
-    text-transform: uppercase;
-    display: inline;
-}
 
-nav > a {
-    display: inline-block; 
-    color: lime; 
+div > p {
     background-color: rgba(132, 221, 217, 0.507);
-    text-align: right;
-    }
-nav a.active {
-        background-color: forestgreen;
-        color: lime;
-    }
-nav a:hover:not(.active) {
-        background-color: rgba(132, 221, 217, 0.507);
-        color: gray;
-    }
-img {
-        width: 180px;
-        height: auto;
-    }
-section > p {
-    background-color: rgba(132, 221, 217, 0.507);
-    align-content: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
 }
 
-div.gallery {
-    margin: 5px;
-    Float: left;
-    border: 1px solid #ccc;
-    width: 180px;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-    background-color: teal;
-    color: whitesmoke;
-}
 
 form {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-    background-color: rgba(132, 221, 217, 0.507);
-    align-content: left;
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;    
-}
-* {
-    box-sizing: border-box;
-}
-
-.box {
-    float: left;
-    width: 20%;
-    padding: 50px;
-    background-color: forestgreen;
-}
-.box2 {
-    float: right;
-    padding-right: 5px;
-    padding-top: 5px;   
+    font-size: medium;
+    border: none;
+    box-align: center;
 }
 
 footer {
@@ -145,51 +73,71 @@ footer {
     font: xx-small;
     text-align: center;
     background-color: rgba(132, 221, 217, 0.507);
+    }
+
+#container {
+  max-width: 960px;
 }
 
-img {
-    display: inline;
+div > img {
+    display: inline-block;
+    width: 150px;
+    height: auto;
 }
 
 /* @media only screen and (min-width:980px){} */
 /* @media only screen and (max-width:768){} */
 /* @media only screen and (max-width:640){} */
 
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 980px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
   }
-  
-  /* Create four equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .responsive {
+    width: 85%;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* On screens that are 640px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 640px) {
-    .column {
-      width: 25%;
-    }
-  }
-  
-  /* On screens that are 768px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 768px) {
-    .column {
+}
+
+@media only screen and (max-width: 640px) {
+    .responsive {
       width: 50%;
     }
   }
 
-  /* On screens that are 980px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 980px) {
-    .row {
-      flex-direction: column;
-    }
-  }
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
