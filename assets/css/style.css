@@ -1,11 +1,36 @@
 body {
-    background-color: bisque;
-    border-color: #dddddd;
-    color: whitesmoke;
-    text-align: left;
-    text-transform: uppercase;
-}   
-header > .h1 {
+    background-image: url(../../assets/gravel/gravel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#containerf {
+    width: 50%;
+    border-style:solid;
+    margin: auto;
+    padding: 30px;
+    }
+
+#gposition{
+    margin: auto;
+    padding: 0px, 30px, 0px, 30px;
+}
+
+#twrap{
+    display: inline;
+}
+
+#wrapper {
+    width: 80%;
+    border-style: groove;
+    margin: auto;
+    padding: 0px, 50px, 0px, 50px;
+    background-color: rgba(132, 221, 217, 0.507);
+    
+    box-sizing: border-box;
+}
+
+  
+h1 {
     color:whitesmoke;
     background-color: forestgreen; 
     text-transform: uppercase;
@@ -26,11 +51,10 @@ h2 {
 }
 h3 {
     color: forestgreen;
-    background-color: bisque;
+    background-color: rgba(132, 221, 217, 0.507);
     text-transform: uppercase;
     text-align: left;
-    width: auto;
-    height: auto;
+    padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
@@ -44,7 +68,7 @@ h2.hName {
 nav > a {
     display: inline-block; 
     color: lime; 
-    background-color: bisque;
+    background-color: rgba(132, 221, 217, 0.507);
     text-align: right;
     }
 nav a.active {
@@ -52,7 +76,7 @@ nav a.active {
         color: lime;
     }
 nav a:hover:not(.active) {
-        background-color: bisque;
+        background-color: rgba(132, 221, 217, 0.507);
         color: gray;
     }
 img {
@@ -60,8 +84,8 @@ img {
         height: auto;
     }
 section > p {
-    background-color: bisque;
-    align-content: center;
+    background-color: rgba(132, 221, 217, 0.507);
+    align-content: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
 }
@@ -92,7 +116,7 @@ div.desc {
 form {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-    background-color: bisque;
+    background-color: rgba(132, 221, 217, 0.507);
     align-content: left;
 }
 .clearfix::after {
@@ -111,18 +135,61 @@ form {
     background-color: forestgreen;
 }
 .box2 {
-    float: left;
-    width: 80%;
-    padding: 50px;
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;   
 }
+
 footer {
     border-top: 8px solid #4aaaa5;
     font: xx-small;
     text-align: center;
-    background-color: #666666;
+    background-color: rgba(132, 221, 217, 0.507);
 }
-#wrap {
-    background-image: url("assets/gravel/gravel.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+
+img {
+    display: inline;
 }
+
+/* @media only screen and (min-width:980px){} */
+/* @media only screen and (max-width:768){} */
+/* @media only screen and (max-width:640){} */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 980px) {
+    .column {
+      width: 25%;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 640px) {
+    .row {
+      flex-direction: column;
+    }
+  }
