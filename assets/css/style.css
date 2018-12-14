@@ -173,22 +173,22 @@ img {
     clear: both;
   }
   
-  /* On screens that are 992px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 980px) {
+  /* On screens that are 640px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 640px) {
     .column {
       width: 25%;
     }
   }
   
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  /* On screens that are 768px wide or less, make the columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 768px) {
     .column {
       width: 50%;
     }
   }
 
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 640px) {
+  /* On screens that are 980px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 980px) {
     .row {
       flex-direction: column;
     }
